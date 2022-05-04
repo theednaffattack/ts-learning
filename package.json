@@ -1,0 +1,12 @@
+{
+  "name": "ts-learning",
+  "version": "1.0.0",
+  "description": "This is a repository to re-implement certain JavaScript features, such as Promises and Array to further my JS learning.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

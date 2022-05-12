@@ -1,6 +1,6 @@
-// import { MyPromise } from "./my-promise";
+import { MyPromise } from "./my-promise";
 
-const MyPromise = Promise;
+// const MyPromise = Promise;
 
 const DEFAULT_VALUE = "default";
 
@@ -19,7 +19,7 @@ describe("then", () => {
 
   it("with then and catch", () => {
     const checkFunc = (v: any) => expect(v).toEqual(DEFAULT_VALUE);
-    const failFunc = (v: any) => expect(1).toEqual(2);
+    const failFunc = (e: any) => expect(1).toEqual(2);
     const resolvePromise = promise().then(checkFunc, failFunc);
     const rejectPromise = promise({ fail: true }).then(failFunc, checkFunc);
     return Promise.allSettled([resolvePromise, rejectPromise]);

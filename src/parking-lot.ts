@@ -19,7 +19,7 @@ export class ParkingLot {
    * A helper method that we use to check the parking lot size.
    */
   getSize() {
-    console.log(`Parking size is: ${this.slots.length}`);
+    console.log(`Parking lot size is: ${this.slots.length}`);
     return this.slots.length;
   }
 
@@ -40,10 +40,14 @@ export class ParkingLot {
   }
 
   /**
-   * Tells us if the parking lot does not have available slots.
+   * Tells us if the parking lot is full,
    * @returns boolean;
    */
   isFull() {
+    console.log(
+      "True / false - the parking lot is full",
+      this.getAvailable() === 0
+    );
     return this.getAvailable() === 0;
   }
 
@@ -55,7 +59,7 @@ export class ParkingLot {
   park(carId: string) {
     console.log(`Parking car: ${carId}`);
     // If we can't find an empty space return false.
-    if (this.slots.every((slot) => slot !== carId)) {
+    if (this.slots.every((slot) => slot !== null)) {
       return false;
     }
 

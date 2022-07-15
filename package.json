@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
+    "lot": "node --loader ts-node/esm ./src/parking.ts",
     "build": "rimraf ./dist && tsc -p tsconfig.build.json",
     "test": "jest"
   },

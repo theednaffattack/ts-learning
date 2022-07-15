@@ -6,6 +6,9 @@
   "type": "module",
   "scripts": {
     "lot": "node --loader ts-node/esm ./src/parking.ts",
+    "dev": "vite --host",
+    "vbuild": "vite build",
+    "preview": "vite preview",
     "build": "rimraf ./dist && tsc -p tsconfig.build.json",
     "test": "jest"
   },
@@ -14,11 +17,20 @@
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^27.5.0",
+    "@types/node": "^18.0.4",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.0.0",
     "eslint": "^8.14.0",
     "jest": "^28.0.3",
     "rimraf": "^3.0.2",
     "ts-jest": "^28.0.1",
     "ts-node": "^10.7.0",
-    "typescript": "^4.6.4"
+    "typescript": "^4.6.4",
+    "vite": "^3.0.0"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }

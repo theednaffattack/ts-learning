@@ -1,2 +1,5 @@
 # Hide node_modules
 node_modules
+
+# Hide build
+dist

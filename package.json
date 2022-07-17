@@ -8,7 +8,7 @@
     "lot": "node --loader ts-node/esm ./src/parking.ts",
     "dev": "vite --host",
     "vbuild": "vite build",
-    "preview": "vite preview",
+    "preview": "vite preview --host",
     "build": "rimraf ./dist && tsc -p tsconfig.build.json",
     "test": "jest"
   },
